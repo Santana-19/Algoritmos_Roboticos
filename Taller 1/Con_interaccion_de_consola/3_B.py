@@ -1,12 +1,10 @@
 # Volumenes
-# Volumenes
-# DESCRIPCION 
+ 
 import math
 
+s = "si"
 
-print("ingresa el salido que deseas evaluar")
-
-while opcion:
+while s != "no":
 
     opcion = input("Seleccione para calcular el volumen\n1. Prisma\n2. Pirámide\n3. Cono truncado\n4. Cilindro\nSolido: ")
 
@@ -38,6 +36,16 @@ while opcion:
         a = float(input("Ingrese el valor de la altura: "))
         v = math.pi * r**2 * a
         print(f"El volumen del cilindro es: {v:.2f}")
+    
+    if opcion != "1" or opcion != "2" or opcion == "3" or opcion != "4" :
+            
+            r = input("\n¿Quieres volver a escoger un solido? (si/no):  ")
+
+    if r != "si" and r != "no":
+
+        while r != "no" and r != "si":
+
+            r = input("\nla palabra ingresada no coresponden a un (si) o un (no): ")
 
 
 
